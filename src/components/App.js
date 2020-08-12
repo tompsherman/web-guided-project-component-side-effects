@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 // TASK 1 - import the axios lib from node_modules
 import axios from 'axios'
 
@@ -23,6 +23,22 @@ export default function App() {
   // caused by the first render only. You'll need `useEffect` from React.
   // The effect should consist of a call to the API using axios.
   // On success, set the array of friend objects from the API into state.
+  useEffect(() => {
+    // use axios
+    // build a legit url using the constants from above
+    // on success breakpoint
+    // on failure breakpoint
+    axios.get(`${BASE_URL}/friends?api_key=${API_KEY}`)
+      .then(res => {
+        setFriends(res.data)
+      })
+      .catch(err => {
+        debugger
+      })
+      .finally(() => {
+        // this runs whether success or failure
+      })
+  }, [])
 
   const Friend = ({ info }) => (
     <div className='friend'>
