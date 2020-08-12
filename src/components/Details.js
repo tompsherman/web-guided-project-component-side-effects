@@ -48,6 +48,10 @@ export default function Details(props) {
         .catch(err => {
           console.log(err)
         })
+    return () => {
+      // does it make sense to clean up?
+      // we cannot cancel promises
+    }
   }, [friendId])
 
   return (
