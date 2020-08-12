@@ -22,6 +22,10 @@ export default function Details(props) {
       console.log(Math.random())
     }
     document.addEventListener('click', listener)
+
+    return () => { // cleanup
+      document.removeEventListener('click', listener)
+    }
   }, [])
 
   // TASK 6 - Create a side effect 🥵 that runs after every render.
