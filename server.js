@@ -29,7 +29,9 @@ app.get('/friends/:id', (req, res) => {
     res.status(404).json({ message: 'No such friend!' })
   }
   else {
-    res.json(friend)
+    setTimeout(() => {
+      res.json(friend)
+    }, 2000)
   }
 })
 
