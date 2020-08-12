@@ -10,7 +10,7 @@ export default function Details(props) {
   useEffect(() => {
     console.log(`🥇after first render`)
     return () => {
-      console.log(`🥇about to die`)
+      console.log(`🥇about to die`) // cleanup
     }
   }, [])
 
