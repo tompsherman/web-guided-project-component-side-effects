@@ -8,9 +8,9 @@ export default function Details(props) {
 
   // TASK 4 - Create a side effect 🥇 that runs only after first render.
   useEffect(() => {
-    console.log(`🥇after first render`)
+    console.log(`🥇EFFECT after first render`)
     return () => {
-      console.log(`🥇about to die`) // cleanup
+      console.log(`🥇CLEANUP about to die`) // cleanup
     }
   }, [])
 
@@ -30,9 +30,9 @@ export default function Details(props) {
 
   // TASK 6 - Create a side effect 🥵 that runs after every render.
   useEffect(() => {
-    console.log(`🥵 after first render and all others ${friendId}`)
+    console.log(`🥵 EFFECT after first render and all others ${friendId}`)
     return () => {
-      console.log(`🥵 cleanin up after ${friendId}`)
+      console.log(`🥵 CLEAN UP after ${friendId}`)
     }
   })
 
@@ -42,6 +42,8 @@ export default function Details(props) {
   // On success, shove the details of the friend in `details` slice of state
   useEffect(() => {
     // axios
+    // construct a decent url
+    // on happy put the friend object in state
   }, [friendId])
 
   return (
