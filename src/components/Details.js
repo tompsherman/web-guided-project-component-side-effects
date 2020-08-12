@@ -7,6 +7,12 @@ export default function Details(props) {
   const [details, setDetails] = useState(null)
 
   // TASK 4 - Create a side effect 🥇 that runs only after first render.
+  useEffect(() => {
+    console.log(`🥇after first render`)
+    return () => {
+      console.log(`🥇about to die`)
+    }
+  }, [])
 
   // TASK 5 - Create a side effect 👻 that runs only after first render
   // and puts a 'click' event handler on document.
@@ -21,7 +27,7 @@ export default function Details(props) {
 
   return (
     <div className='container'>
-      <h2>Details:</h2>
+      <h2>Details: {friendId}</h2>
       {
         details &&
         <>
