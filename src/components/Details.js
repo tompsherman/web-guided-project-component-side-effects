@@ -19,7 +19,7 @@ export default function Details(props) {
   // See what happens if we don't clean up.
   useEffect(() => {
     function listener () {
-      console.log(Math.random())
+      // console.log(Math.random())
     }
     document.addEventListener('click', listener)
 
@@ -30,9 +30,9 @@ export default function Details(props) {
 
   // TASK 6 - Create a side effect 🥵 that runs after every render.
   useEffect(() => {
-    console.log(`🥵 after first render and all others`)
+    console.log(`🥵 after first render and all others ${friendId}`)
     return () => {
-      console.log(`🥵 cleanin up`)
+      console.log(`🥵 cleanin up after ${friendId}`)
     }
   })
 
