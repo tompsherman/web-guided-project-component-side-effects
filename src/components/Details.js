@@ -18,7 +18,7 @@ export default function Details(props) {
   // and puts a 'click' event handler on document.
   // See what happens if we don't clean up.
   useEffect(() => {
-    const listener = () => {
+    function listener () {
       console.log(Math.random())
     }
     document.addEventListener('click', listener)
