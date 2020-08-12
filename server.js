@@ -31,7 +31,7 @@ app.get('/friends/:id', (req, res) => {
   else {
     setTimeout(() => {
       res.json(friend)
-    }, 2000)
+    }, 500)
   }
 })
 
